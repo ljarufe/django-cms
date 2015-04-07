@@ -71,7 +71,7 @@ except ImportError:
 if django.VERSION >= (1, 5):
     from django.contrib.auth import get_user_model
     from django.contrib.auth.models import User as OriginalUser
-    is_user_swapped = bool(OriginalUser._meta.swapped)
+    is_user_swapped = True
 else:
     from django.contrib.auth.models import User
     User.USERNAME_FIELD = 'username'
